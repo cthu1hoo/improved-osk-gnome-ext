@@ -7,7 +7,8 @@ This is a fork of https://github.com/nick-shmyrev/improved-osk-gnome-ext but sim
 * No custom CSS (stock Gnome colors)
 
 
-![Screenshot](screenshots/Screenshot from 2022-06-14 10-28-35.png)
-![Screenshot](screenshots/Screenshot from 2022-06-14 10-29-24.png)
+![Screenshot](screenshots/1.png)
+
+![Screenshot](screenshots/2.png)
 
 
