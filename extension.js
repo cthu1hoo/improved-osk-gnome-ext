@@ -205,7 +205,7 @@ function override_keyvalRelease(keyval) {
 }
 
 function override_getDefaultKeysForRow(row, numRows, level) {
-  let defaultKeysPreMod = [
+  /* let defaultKeysPreMod = [
     [
       [{ label: "Esc", width: 1, keyval: Clutter.KEY_Escape }],
       [{ label: "↹", width: 1.5, keyval: Clutter.KEY_Tab }],
@@ -319,7 +319,6 @@ function override_getDefaultKeysForRow(row, numRows, level) {
     [
       [
         { label: "⌫", width: 1.5, keyval: Clutter.KEY_BackSpace },
-        { label: "⌦", width: 1, keyval: Clutter.KEY_Delete },
         { label: "⇊", width: 1, action: "hide", extraClassName: "hide-key" },
       ],
       [
@@ -330,8 +329,8 @@ function override_getDefaultKeysForRow(row, numRows, level) {
           extraClassName: "enter-key",
         },
         {
-          label: "🗺",
-          width: 1.5,
+          icon: 'keyboard-layout-symbolic',
+			 width: 1.5,
           action: "languageMenu",
           extraClassName: "layout-key",
         },
@@ -356,7 +355,6 @@ function override_getDefaultKeysForRow(row, numRows, level) {
     [
       [
         { label: "⌫", width: 1.5, keyval: Clutter.KEY_BackSpace },
-        { label: "⌦", width: 1, keyval: Clutter.KEY_Delete },
         { label: "⇊", width: 1, action: "hide", extraClassName: "hide-key" },
       ],
       [
@@ -367,7 +365,7 @@ function override_getDefaultKeysForRow(row, numRows, level) {
           extraClassName: "enter-key",
         },
         {
-          label: "🗺",
+          icon: 'keyboard-layout-symbolic',
           width: 1.5,
           action: "languageMenu",
           extraClassName: "layout-key",
@@ -393,7 +391,6 @@ function override_getDefaultKeysForRow(row, numRows, level) {
     [
       [
         { label: "⌫", width: 1.5, keyval: Clutter.KEY_BackSpace },
-        { label: "⌦", width: 1, keyval: Clutter.KEY_Delete },
         { label: "⇊", width: 1, action: "hide", extraClassName: "hide-key" },
       ],
       [
@@ -403,7 +400,7 @@ function override_getDefaultKeysForRow(row, numRows, level) {
           keyval: Clutter.KEY_Return,
         },
         {
-          label: "🗺",
+          icon: 'keyboard-layout-symbolic',
           width: 1.5,
           action: "languageMenu",
           extraClassName: "layout-key",
@@ -426,7 +423,6 @@ function override_getDefaultKeysForRow(row, numRows, level) {
         { label: "F2", width: 1, keyval: Clutter.KEY_F2 },
         { label: "F3", width: 1, keyval: Clutter.KEY_F3 },
         { label: "⌫", width: 1.5, keyval: Clutter.KEY_BackSpace },
-        { label: "⌦", width: 1, keyval: Clutter.KEY_Delete },
         { label: "⇊", width: 1, action: "hide", extraClassName: "hide-key" },
       ],
       [
@@ -440,7 +436,7 @@ function override_getDefaultKeysForRow(row, numRows, level) {
           extraClassName: "enter-key",
         },
         {
-          label: "🗺",
+          icon: 'keyboard-layout-symbolic',
           width: 1.5,
           action: "languageMenu",
           extraClassName: "layout-key",
@@ -463,7 +459,75 @@ function override_getDefaultKeysForRow(row, numRows, level) {
         { label: "→", width: 1, keyval: Clutter.KEY_Right },
       ],
     ],
-  ];
+  ]; */
+
+  const defaultKeysPreMod = [
+    [
+        [
+				{ label: "Esc", width: 1.5, keyval: Clutter.KEY_Escape },
+		  ],
+        [{ label: "↹", width: 1.5, keyval: Clutter.KEY_Tab }],
+        [{ width: 1.5, level: 1, extraClassName: 'shift-key-lowercase', icon: 'keyboard-shift-symbolic' }],
+        [
+			{ label: "Ctrl", width: 1.5, keyval: Clutter.KEY_Control_L, extraClassName: "control-key", },
+         { label: "Alt",  width: 1, keyval: Clutter.KEY_Alt_L, extraClassName: "alt-key", },
+         { label: '?123', width: 1.5, level: 2 }],
+    ], [
+        [
+				{ label: "Esc", width: 1.5, keyval: Clutter.KEY_Escape },
+		  ],
+        [{ label: "↹", width: 1.5, keyval: Clutter.KEY_Tab }],
+        [{ width: 1.5, level: 0, extraClassName: 'shift-key-uppercase', icon: 'keyboard-shift-symbolic' }],
+        [
+			{ label: "Ctrl", width: 1.5, keyval: Clutter.KEY_Control_L, extraClassName: "control-key", },
+         { label: "Alt",  width: 1, keyval: Clutter.KEY_Alt_L, extraClassName: "alt-key", },
+		  { label: '?123', width: 1.5, level: 2 }],
+    ], [
+        [
+				{ label: "Esc", width: 1.5, keyval: Clutter.KEY_Escape },
+		  ],
+        [{ label: "↹", width: 1.5, keyval: Clutter.KEY_Tab }],
+        [{ label: '=/<', width: 1.5, level: 3 }],
+        [
+			{ label: "Ctrl", width: 1.5, keyval: Clutter.KEY_Control_L, extraClassName: "control-key", },
+      	{ label: "Alt",  width: 1, keyval: Clutter.KEY_Alt_L, extraClassName: "alt-key", },
+		  	{ label: 'ABC', width: 1.5, level: 0 }],
+    ], [
+        [
+				{ label: "Esc", width: 1.5, keyval: Clutter.KEY_Escape },
+		  ],
+        [{ label: "↹", width: 1.5, keyval: Clutter.KEY_Tab }],
+        [{ label: '?123', width: 1.5, level: 2 }],
+        [
+			{ label: "Ctrl", width: 1.5, keyval: Clutter.KEY_Control_L, extraClassName: "control-key", },
+         { label: "Alt",  width: 1, keyval: Clutter.KEY_Alt_L, extraClassName: "alt-key", },
+ 			{ label: 'ABC', width: 1.5, level: 0 }],
+    ],
+];
+
+const defaultKeysPostMod = [
+    [
+        [{ width: 1.5, keyval: Clutter.KEY_BackSpace, icon: 'edit-clear-symbolic' }],
+        [{ width: 2, keyval: Clutter.KEY_Return, extraClassName: 'enter-key', icon: 'keyboard-enter-symbolic' }],
+        [{ width: 3, level: 1, right: true, extraClassName: 'shift-key-lowercase', icon: 'keyboard-shift-symbolic' }],
+        [/*{ action: 'emoji', icon: 'face-smile-symbolic' },*/ { action: 'languageMenu', extraClassName: 'layout-key', icon: 'keyboard-layout-symbolic' }, { action: 'hide', extraClassName: 'hide-key', icon: 'go-down-symbolic' }],
+    ], [
+        [{ width: 1.5, keyval: Clutter.KEY_BackSpace, icon: 'edit-clear-symbolic' }],
+        [{ width: 2, keyval: Clutter.KEY_Return, extraClassName: 'enter-key', icon: 'keyboard-enter-symbolic' }],
+        [{ width: 3, level: 0, right: true, extraClassName: 'shift-key-uppercase', icon: 'keyboard-shift-symbolic' }],
+        [/*{ action: 'emoji', icon: 'face-smile-symbolic' },*/ { action: 'languageMenu', extraClassName: 'layout-key', icon: 'keyboard-layout-symbolic' }, { action: 'hide', extraClassName: 'hide-key', icon: 'go-down-symbolic' }],
+    ], [
+        [{ width: 1.5, keyval: Clutter.KEY_BackSpace, icon: 'edit-clear-symbolic' }],
+        [{ width: 2, keyval: Clutter.KEY_Return, extraClassName: 'enter-key', icon: 'keyboard-enter-symbolic' }],
+        [{ label: '=/<', width: 3, level: 3, right: true }],
+        [/*{ action: 'emoji', icon: 'face-smile-symbolic' },*/ { action: 'languageMenu', extraClassName: 'layout-key', icon: 'keyboard-layout-symbolic' }, { action: 'hide', extraClassName: 'hide-key', icon: 'go-down-symbolic' }],
+    ], [
+        [{ width: 1.5, keyval: Clutter.KEY_BackSpace, icon: 'edit-clear-symbolic' }],
+        [{ width: 2, keyval: Clutter.KEY_Return, extraClassName: 'enter-key', icon: 'keyboard-enter-symbolic' }],
+        [{ label: '?123', width: 3, level: 2, right: true }],
+        [/*{ action: 'emoji', icon: 'face-smile-symbolic' },*/ { action: 'languageMenu', extraClassName: 'layout-key', icon: 'keyboard-layout-symbolic' }, { action: 'hide', extraClassName: 'hide-key', icon: 'go-down-symbolic' }],
+    ],
+];
 
   /* The first 2 rows in defaultKeysPre/Post belong together with
    * the first 2 rows on each keymap. On keymaps that have more than
@@ -629,7 +693,7 @@ function override_loadDefaultKeys(keys, layout, numLevels, numKeys) {
 }
 
 function enable_overrides() {
-  Keyboard.Keyboard.prototype["_relayout"] = override_relayout;
+  //Keyboard.Keyboard.prototype["_relayout"] = override_relayout;
   Keyboard.Keyboard.prototype["_loadDefaultKeys"] = override_loadDefaultKeys;
   Keyboard.Keyboard.prototype["_getDefaultKeysForRow"] = override_getDefaultKeysForRow;
 
@@ -642,7 +706,7 @@ function enable_overrides() {
 }
 
 function disable_overrides() {
-  Keyboard.Keyboard.prototype["_relayout"] = backup_relayout;
+  //Keyboard.Keyboard.prototype["_relayout"] = backup_relayout;
   Keyboard.Keyboard.prototype["_loadDefaultKeys"] = backup_loadDefaultKeys;
   Keyboard.Keyboard.prototype["_getDefaultKeysForRow"] = backup_DefaultKeysForRow;
 
@@ -742,7 +806,7 @@ function disable() {
     _indicator.destroy();
     _indicator = null;
   }
-  
+
   settings = null;
 
   disable_overrides();
